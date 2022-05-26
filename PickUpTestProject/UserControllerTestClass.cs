@@ -38,7 +38,7 @@ namespace PickUpTestProject
         public void PickUpMatch_Test(string userAPickUp)
         {
             UserController userController = new UserController();
-            User user = userController.GetUser(EnumUserName.userA);
+            UserClass user = userController.GetUser(EnumUserName.userA);
 
             bool result = userController.PickUpMatch(user, userAPickUp);
             Assert.AreEqual(result,true);

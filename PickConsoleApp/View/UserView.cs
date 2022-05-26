@@ -10,7 +10,7 @@ namespace PickUpConsoleApp.View
 
     public class UserView
     {
-        public void PrintUser(User user)
+        public void PrintUser(UserClass user)
         {
             string strRowItems = string.Join(",", user.MatchList);
 

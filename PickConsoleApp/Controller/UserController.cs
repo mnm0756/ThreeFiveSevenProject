@@ -20,7 +20,7 @@ namespace PickUpConsoleApp.Controller
         /// </summary>
         /// <param name="UserName">username 从EnumUser中选1</param>
         /// <returns>User</returns>
-        public User GetUser(EnumUserName UserName)
+        public UserClass GetUser(EnumUserName UserName)
         {
             return UserListClass.GetUser(UserName);
         }
@@ -28,7 +28,7 @@ namespace PickUpConsoleApp.Controller
         /// 打印用户类的信息
         /// </summary>
         /// <param name="user">user</param>
-        public void PrintUser(User user)
+        public void PrintUser(UserClass user)
         {
             UserView userView = new UserView();
             userView.PrintUser(user);
@@ -40,7 +40,7 @@ namespace PickUpConsoleApp.Controller
         /// <param name="user">user</param>
         /// <param name="matchNoList">拿的火柴ID 列表</param>
         /// <returns></returns>
-        public bool PickUpMatch(User user,string matchNoList)
+        public bool PickUpMatch(UserClass user,string matchNoList)
         {
             string sMessage = string.Format("用户:{0}   拿了火柴{1}", user.Name, matchNoList);
             SystemLog.Log(sMessage);
@@ -179,7 +179,7 @@ namespace PickUpConsoleApp.Controller
         /// 检查用户是否已经获胜
         /// </summary>
         /// <param name="user">user</param>
-        private void CheckResult(User user)
+        private void CheckResult(UserClass user)
         {
             List<int> allRowItems = new List<int>();
 

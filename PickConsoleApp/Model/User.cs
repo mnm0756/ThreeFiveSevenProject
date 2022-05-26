@@ -10,7 +10,7 @@ namespace PickUpConsoleApp.Model
     /// <summary>
     /// 用户类
     /// </summary>
-    public  class User
+    public  class UserClass
     {
         /// <summary>
         /// 用户名
@@ -26,7 +26,7 @@ namespace PickUpConsoleApp.Model
         /// 构造函数
         /// </summary>
         /// <param name="enumUser"></param>
-        public User(EnumUserName enumUser)
+        public UserClass(EnumUserName enumUser)
         {
             Name = enumUser;
         }

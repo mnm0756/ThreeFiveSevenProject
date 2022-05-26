@@ -23,8 +23,8 @@ namespace PickUpConsoleApp
             //初始化 userA 和userB
             UserController userController = new UserController();
 
-            User userA = userController.GetUser(EnumUserName.userA);
-            User userB = userController.GetUser(EnumUserName.userB);
+            UserClass userA = userController.GetUser(EnumUserName.userA);
+            UserClass userB = userController.GetUser(EnumUserName.userB);
 
             //初始化火柴列表
             MatchListController matchListController = new MatchListController();

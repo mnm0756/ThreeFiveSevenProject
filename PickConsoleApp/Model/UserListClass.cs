@@ -16,16 +16,16 @@ namespace PickUpConsoleApp.Model
         /// <summary>
         /// 用户集合
         /// </summary>
-        static Dictionary<EnumUserName, User>   userList = new Dictionary<EnumUserName, User>();
+        static Dictionary<EnumUserName, UserClass>   userList = new Dictionary<EnumUserName, UserClass>();
 
         /// <summary>
         /// 根据UserName 取得用户
         /// </summary>
         /// <param name="UserName">用户名</param>
         /// <returns></returns>
-        public static User GetUser(EnumUserName UserName)
+        public static UserClass GetUser(EnumUserName UserName)
         {
-            User item = null;
+            UserClass item = null;
             if (UserName == EnumUserName.userA)
             {
           
@@ -36,7 +36,7 @@ namespace PickUpConsoleApp.Model
                 }
                 else
                 {
-                    item = new User(EnumUserName.userA);
+                    item = new UserClass(EnumUserName.userA);
                     userList.Add(EnumUserName.userA, item);
                     return item;
                 }
@@ -51,7 +51,7 @@ namespace PickUpConsoleApp.Model
                 }
                 else
                 {
-                    item = new User(EnumUserName.userB);
+                    item = new UserClass(EnumUserName.userB);
                     userList.Add(EnumUserName.userB, item);
                     return item;
                 }
@@ -62,13 +62,13 @@ namespace PickUpConsoleApp.Model
         /// <summary>
         /// 当前用户
         /// </summary>
-        private static User currentUser =null;
+        private static UserClass currentUser =null;
 
        /// <summary>
        /// 取得下一个用户
        /// </summary>
        /// <returns></returns>
-        public static User NextUser()
+        public static UserClass NextUser()
         {
             foreach (var item in userList)
             {
